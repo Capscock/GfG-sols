@@ -1,0 +1,25 @@
+class Solution
+
+{
+String removeDuplicates(String str)
+
+{
+LinkedHashSet<Character>set=new LinkedHashSet<>();
+
+char ch;
+for(int i=0;i<str.length();i++)
+{
+ch=str.charAt(i);
+set.add(ch);
+}
+Iterator it = set.iterator();
+String S="";
+boolean x= true;
+while(x==true)
+{
+S=S+it.next();
+x=it.hasNext();
+}
+return S;
+}
+}
